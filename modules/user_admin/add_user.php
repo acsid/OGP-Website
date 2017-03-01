@@ -75,7 +75,7 @@ function exec_ogp_module()
     }
     else
     {
-		$pass = genRandomString(10);
+		$password = genRandomString(10);
 ?>
     <div class="center">
     <h2><?php print_lang('add_a_new_user'); ?></h2>
