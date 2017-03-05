@@ -82,7 +82,7 @@
       <desc>The name of the cluster.</desc>
     </param>
     <param key="-ClusterDirOverride=" type="text" id="CDO">
-      <default>/home/ogp_agent/OGP_User_Files/HOME_ID/ShooterGame/Saved</default>
+      <default></default>
       <caption></caption>
 	  <options>ns</options>
       <desc>Path of the shared cluster directory.</desc>
