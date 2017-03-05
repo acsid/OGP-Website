@@ -36,28 +36,21 @@ function exec_ogp_module()
 		if( isset( $_GET['changevServer'] ) OR  !isset( $_SESSION['ts3_ip'] ))
 		{
 			$remote_servers = $db->getRemoteServers();
-
-			if ($remote_servers !== false) {
-				echo "<form action='home.php?m=TS3Admin' method='GET'>
-					 <input type='hidden' name='m' value='". $_GET['m'] . "' />
-					 <table class='center'>
-					 <tr>
-					 <td class='left'>
-					 <select onchange=".'"this.form.submit()"'." name='rserver_id'>
-					 <option></option>\n";
-				foreach ( $remote_servers as $server )
-				{
-					echo "<option value='".$server['remote_server_id']."'>".
-						$server['remote_server_name']." (".$server['agent_ip'].")</option>\n";
-				}
-				echo "</select>
-					  </form>
-					  </td></tr></table>";
-
-			} else {
-				echo get_lang('no_remote_servers');
-				
+			echo "<form action='home.php?m=TS3Admin' method='GET'>
+				 <input type='hidden' name='m' value='". $_GET['m'] . "' />
+				 <table class='center'>
+				 <tr>
+				 <td class='left'>
+				 <select onchange=".'"this.form.submit()"'." name='rserver_id'>
+				 <option></option>\n";
+			foreach ( $remote_servers as $server )
+			{
+				echo "<option value='".$server['remote_server_id']."'>".
+					$server['remote_server_name']." (".$server['agent_ip'].")</option>\n";
 			}
+			echo "</select>
+				  </form>
+				  </td></tr></table>";
 		}
 		
 		if( isset( $_GET['rserver_id'] ) )
@@ -119,7 +112,7 @@ function exec_ogp_module()
 			}
 			else
 			{
-				echo get_lang('no_ts3_servers_assigned_to_account');
+				echo "There are no TS3 servers assigned to your account.";
 				return;
 			}
 		}

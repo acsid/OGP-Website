@@ -39,7 +39,7 @@ class refreshed
 	private $url;
 	private $pos;
 	
-	public function __construct()
+	public function refreshed()
 	{
 		$this->url = array();
 		$this->pos = 0;
