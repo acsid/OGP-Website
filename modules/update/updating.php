@@ -74,7 +74,7 @@ function exec_ogp_module()
 	{
 		// Download file to temporary folder
 		$temp_dwl = $temp . DIRECTORY_SEPARATOR . $_GET['version'] . '.zip';
-		$dwl = 'https://github.com/OpenGamePanel/'.REPONAME.'/archive/'.$_GET['version'].'.zip';
+		$dwl = 'https://github.com/acsid/'.REPONAME.'/archive/'.$_GET['version'].'.zip';
 		$zip_raw_data = file_get_contents($dwl);
 		if(! $zip_raw_data)
 		{
